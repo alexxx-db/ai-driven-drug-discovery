@@ -33,7 +33,7 @@ With the [Genie Space enabled](url) during dashboard publication, users can _"As
 
 Our example walkthrough highlights the following:    
 
-### Databricks Features (with Integrated Highlights)
+### Databricks Features
 
 | Area | Feature | Role in this solution | Why it matters |
 |------|---------|-----------------------|----------------|
