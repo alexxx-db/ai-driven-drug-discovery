@@ -36,7 +36,7 @@ When a [AIBI dashboard is Genie Space enabled](https://docs.databricks.com/aws/e
 
 Our example walkthrough highlights the following:    
 
-### Databricks Features
+#### Databricks Features
 
 | Area | Feature | Role in this solution | Why it matters |
 |------|---------|-----------------------|----------------|
