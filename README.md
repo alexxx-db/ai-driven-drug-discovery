@@ -8,8 +8,6 @@ How GenAI can help identify promising, under-researched proteins and uncover the
 ## Overview  
 
 ---   
-### [todo update links]
-
 The associated [set of notebooks](path?) corresponding to the [**_AI-Driven Drug Discovery_**](path?) mainly involves data preparation and  foundational model endpoint setup and usage. 
 
 The notebooks cover: [01 protein data pre-processing](path?), [02 protein classification](path?), and will also leverage GenAI to [03 help democratize scientific knowledge](path?) as well as with [04 downstream discovery efforts](path?). 
@@ -18,7 +16,7 @@ The following diagram illustrates the flow of processes involved and the [Databr
 
 ![architecture sketch](./assets/imgs/AI-Drug-Discovery-Page2.png) 
 
-The [processed data written to Unity Catalog](https://docs.databricks.com/aws/en/data-governance/unity-catalog) and [served external foundational model endpoint](https://docs.databricks.com/en/generative-ai/external-models.html) will be used to create the associated [AI/BI Dashboard](https://docs.databricks.com/aws/en/dashboards/); e.g. [saved as pdf for sharing](/assets/imgs/AI-Driven Drug Discovery [Dashboard].jpg). 
+The [processed data written to Unity Catalog](https://docs.databricks.com/aws/en/data-governance/unity-catalog) and [served external foundational model endpoint](https://docs.databricks.com/en/generative-ai/external-models.html) will be used to create the associated "_multi-page_" [AI/BI Dashboard](https://docs.databricks.com/aws/en/dashboards/); [downloadable as a pdf](https://github.com/databricks-industry-solutions/ai-driven-drug-discovery/blob/mmt_devs/assets/imgs/AI-Driven%20Drug%20Discovery%20%5BDashboard%5D.jpg). 
 
 <!-- > _**`to provide an example of how GenAI can be leveraged to discover more about protein properties and whether there are candidate proteins that are under-researched in areas that show promise for potential drug discovery.`**_ -->
 
