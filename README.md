@@ -1,5 +1,5 @@
 # AI-Driven Drug Discovery
-How GenAI can help identify promising, under-researched proteins and uncover their properties for drug discovery
+How GenAI can help identify promising, under-researched proteins, and uncover their properties for drug discovery
 
 [![Databricks](https://img.shields.io/badge/Databricks-Solution_Accelerator-FF3621?style=for-the-badge&logo=databricks)](https://databricks.com)
 [![Unity Catalog](https://img.shields.io/badge/Unity_Catalog-Enabled-00A1C9?style=for-the-badge)](https://docs.databricks.com/en/data-governance/unity-catalog/index.html)
