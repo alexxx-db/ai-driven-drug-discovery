@@ -1,0 +1,50 @@
+## UC: 
+<catalog_name>.ai_driven_drug_discovery
+
+
+## ELT Pipeline JSON
+{
+    "id": "################################",
+    "pipeline_type": "WORKSPACE",
+    "development": true,
+    "event_log": {
+        "catalog": "<catalog_name>",
+        "schema": "ai_driven_drug_discovery",
+        "name": "proteindata_ETL"
+    },
+    "continuous": false,
+    "channel": "CURRENT",
+    "photon": true,
+    "libraries": [
+        {
+            "notebook": {
+                "path": "/Users/<user@email.com>/<path_to_repo>/ai-driven-drug-discovery/notebooks/0.2.0_ProteinData_ETL"
+            }
+        }
+    ],
+    "name": "proteindata_ETL",
+    "serverless": true,
+    "catalog": "<catalog_name>",
+    "tags": [
+        {
+            "key": "removeAfter",
+            "value": "2026-12-31"
+        }
+    ],
+    "schema": "ai_driven_drug_discovery",
+    "budget_policy_id": "################################"
+}
+
+## compute JSON 
+"spec": {
+        "cluster_name": "<cluster_name>",
+        "spark_version": "15.4.x-scala2.12",
+        "aws_attributes": {
+            "zone_id": "auto"
+        },
+        "node_type_id": "g4dn.4xlarge",
+        "custom_tags": {
+            "removeAfter": "2026-12-31"
+        }
+    }
+    

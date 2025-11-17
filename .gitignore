@@ -25,3 +25,7 @@ build/
 # Environment files
 .env
 .env.local 
+
+# Dev folders & files
+._devs
+._omit
