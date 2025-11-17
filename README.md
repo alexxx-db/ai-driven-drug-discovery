@@ -11,9 +11,34 @@ How GenAI can help identify promising, under-researched proteins, and uncover th
 The [set of notebooks](notebooks) found within this repository mainly involves data preparation and foundational model endpoint setup and usage.  
 
 The notebooks cover:    
-[`utils.py`](notebooks.utils.py)   
-[`0.1.0_Download_UNIPROT_fasta`](notebooks.0.1.0_Download_UNIPROT_fasta.py)   
+[`utils.py`](notebooks/utils.py)   
+[`0.1.0_Download_UNIPROT_fasta`](notebooks/0.1.0_Download_UNIPROT_fasta.ipynb)   
 [`0.2.0_ProteinData_ETL`](path?), [`0.3.0_TransformerCNN_Protein_Classification`](path?), and will also leverage GenAI to [`0.4.0_Register&Query_scientific2simple_UDF`][03 help democratize scientific knowledge](path?) as well as with [`0.5.0_Create&Query_ExternalEndpoint_gpt4o`][04 downstream discovery efforts](path?).    
+
+Most of the notebooks will rely on the `utils.py` which you are required to update the Unity Catalog `<catalog_name>` e.g.
+
+```
+# utils.py
+# ============================================================
+# REQUIRED: UPDATE THESE DEFAULT VALUES FOR YOUR ENVIRONMENT
+# ============================================================
+# These values are used when widgets are not enabled, or as 
+# placeholder fallback defaults when widget values are empty.
+# 
+
+## REPLACE THE VALUES BELOW WITH YOUR OWN BEFORE running the notebooks:
+
+CATALOG_NAME = "<your_catalog_name>"      # TODO: Replace with <your_catalog_name>
+SCHEMA_NAME = "ai_driven_drug_discovery"  # TODO: Replace with <your_schema_name>
+VOLUME_NAME = "protein_seq"               # TODO: Replace with <your_volume_name> for file storage
+ENDPOINT_NAME = "az_openai_gpt4o"         # TODO: Replace with <your_external_endpoint_name> e.g. AI Gateway endpoint name
+    
+```    
+
+<b>    
+
+---      
+<br> 
 
 The following diagram illustrates the flow of processes involved and the [Databricks Intelligent Platform](https://www.databricks.com/resources/demos/tours/horizontal/introducing-databricks-intelligence-platform) features utilized (in red).     
 
