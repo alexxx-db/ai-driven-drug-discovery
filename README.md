@@ -8,9 +8,12 @@ How GenAI can help identify promising, under-researched proteins, and uncover th
 ## Overview  
 
 ---   
-The associated [set of notebooks](path?) corresponding to the [**_AI-Driven Drug Discovery_**](path?) mainly involves data preparation and  foundational model endpoint setup and usage. 
+The [set of notebooks](notebooks) found within this repository mainly involves data preparation and foundational model endpoint setup and usage.  
 
-The notebooks cover: [01 protein data pre-processing](path?), [02 protein classification](path?), and will also leverage GenAI to [03 help democratize scientific knowledge](path?) as well as with [04 downstream discovery efforts](path?). 
+The notebooks cover:    
+[`utils.py`](notebooks.utils.py)   
+[`0.1.0_Download_UNIPROT_fasta`](notebooks.0.1.0_Download_UNIPROT_fasta.py)   
+[`0.2.0_ProteinData_ETL`](path?), [`0.3.0_TransformerCNN_Protein_Classification`](path?), and will also leverage GenAI to [`0.4.0_Register&Query_scientific2simple_UDF`][03 help democratize scientific knowledge](path?) as well as with [`0.5.0_Create&Query_ExternalEndpoint_gpt4o`][04 downstream discovery efforts](path?).    
 
 The following diagram illustrates the flow of processes involved and the [Databricks Intelligent Platform](https://www.databricks.com/resources/demos/tours/horizontal/introducing-databricks-intelligence-platform) features utilized (in red).     
 
