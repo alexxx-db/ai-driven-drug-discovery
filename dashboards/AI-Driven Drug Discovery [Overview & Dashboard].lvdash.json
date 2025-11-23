@@ -366,7 +366,7 @@
                 "\n",
                 "The following diagram illustrates the flow of processes involved and the [Databricks Intelligent Platform](https://www.databricks.com/resources/demos/tours/horizontal/introducing-databricks-intelligence-platform) features utilized (in red):   \n",
                 "\n",
-                "![Architecture Flow](https://<databricks-instance>/ajax-api/2.0/fs/files//Volumes/<catalog\\_name>/ai\\_driven\\_drug\\_discovery/imgs/AI-Drug-Discovery-Page2.png)\n",
+                "![architecture flow](https://<databricks_instance>//ajax-api/2.0/fs/files//Volumes/<catalog_name>/ai\\_driven\\_drug\\_discovery/imgs/AI-Drug-Discovery-Page2.png)\n",
                 "\n",
                 "--- \n",
                 "\n",
@@ -376,10 +376,10 @@
                 "\n",
                 "- i) pre-processing the [FASTA protein sequence data](https://www.uniprot.org/help/downloads) using a **Protein Data Processing** [Delta Live Tables](https://www.databricks.com/product/delta-live-tables) pipeline to help extract protein information e.g. *identifiers*, *sequences*, *names*, *organism information*, *gene names*, *protein existence*, and *molecular weight*;    \n",
                 "- ii) perform **protein sequence classification** using [a hybrid approach that combines Protein Language Model, e.g., ProtBERT-BFD and a Classifier, e.g., CNN](https://pubmed.ncbi.nlm.nih.gov/37497772/) to provide enhanced identification of [`membrane transport proteins`](https://www.nature.com/articles/s41598-017-17216-1) (cf. `water soluble` proteins). We can then sift out protein classification at a suitably high (adjustable) classification confidence threshold      <br>---        <br>Additional **post-processing with GenAI leveraging&#32;**[ai-query() ](https://docs.databricks.com/en/sql/language-manual/functions/ai_query.html)yielded the following 2 datasets, which can potentially help in downstream drug discovery processes.\n",
-                "- `tinysample_organism_info_scientificNsimple`: contains scientific (`OrganismName`), layman (`Organism_SimpleTerm`), and corresponding `Organism_Definition` information about the different organisms found in the `proteinclassification_tiny` table. It is derived with [ai\\_query](https://e2-demo-west.cloud.databricks.com/editor/notebooks/1625373258635024?o=2556758628403379#command/1625373258638832) using the pay-per-token [Foundational Model API](https://docs.databricks.com/en/machine-learning/foundation-models/index.html) `databricks-meta-llama-3-3-70b-instruct` [model endpoint](https://docs.databricks.com/en/machine-learning/model-serving/index.html) and making [batch interferencing](https://e2-demo-west.cloud.databricks.com/editor/notebooks/1625373258635024?o=2556758628403379#command/1625373258638913) with the `ai_query()` registered as a [User Defined Function in Unity Catalog](https://docs.databricks.com/en/udf/unity-catalog.html).     <br>---\n",
+                "- `tinysample_organism_info_scientificNsimple`: contains scientific (`OrganismName`), layman (`Organism_SimpleTerm`), and corresponding `Organism_Definition` information about the different organisms found in the `proteinclassification_tiny` table. It is derived with [ai\\_query](https://e2-demo-west.cloud.databricks.com/editor/notebooks/1625373258635024?o=2556758628403379#command/1625373258638832) using a pay-per-token [Foundational Model API](https://docs.databricks.com/en/machine-learning/foundation-models/index.html) `databricks-claude-sonnet-4-5` [model endpoint](https://docs.databricks.com/en/machine-learning/model-serving/index.html) and making [batch interferencing](https://e2-demo-west.cloud.databricks.com/editor/notebooks/1625373258635024?o=2556758628403379#command/1625373258638913) with the `ai_query()` registered as a [User Defined Function in Unity Catalog](https://docs.databricks.com/en/udf/unity-catalog.html).     <br>---\n",
                 "- `tinysample_organism_protein_research_info`: contains research information about organisms and their associated proteins, including `recent research` and `under-researched areas` of these proteins that show potential promise for drug discovery. These research insights are derived with the help of [using Azure OpenAI GPT-4o served as an External Model Endpoint](https://docs.databricks.com/aws/en/machine-learning/model-serving/create-foundation-model-endpoints#ext-model-endpoint) and [queried as an External Model using `ai-query()`](https://docs.databricks.com/en/large-language-models/ai-query-external-model.html). For more efficient exploration, the queries for our `tinysample` of proteins are [preprocessed in bulk](https://e2-demo-west.cloud.databricks.com/editor/notebooks/1625373258636712?o=2556758628403379%3Fparent%3Dfolders%2F1625373258638091#command/1625373258641291).      \n",
                 "\n",
-                "These tables are found within the demo workspace [Unity Catalog](https://docs.databricks.com/en/catalogs/index.html) and [Schema](https://docs.databricks.com/en/schemas/index.html#what-is-a-schema): [`demos_genie.hls_ai_drug_discovery`](https://e2-demo-west.cloud.databricks.com/explore/data/demos_genie/hls_ai_drug_discovery?o=2556758628403379) and are connected primarily through the `OrganismName`.        \n",
+                "These tables are found within the demo workspace [Unity Catalog](https://docs.databricks.com/en/catalogs/index.html) and [Schema](https://docs.databricks.com/en/schemas/index.html#what-is-a-schema): `<catalog_name>.ai_driven_drug_discovery` and are connected primarily through the `OrganismName`.        \n",
                 "\n",
                 "--- \n",
                 "<p>&nbsp;</p>\n",
@@ -394,7 +394,7 @@
                 "\n",
                 "#### FUTURE USE CASE:\n",
                 "\n",
-                "It would be helpful to combine the under-researched areas for proteins of interest and visualize their corresponding 3D structural information. By leveraging Deep Learning / GenAI /Transformer models (e.g., [AlphaFold](https://www.nature.com/articles/s41586-021-03819-2), [RFdiffusion](https://www.nature.com/articles/s41586-023-06415-8), including other relevant Life Sciences GenAI/Transformer models, etc.) trained or fine-tuned to predict protein function, structure ([ref](https://deepmind.google/discover/blog/alphafold-reveals-the-structure-of-the-protein-universe/)), as well as potentially simulate new proteins or ways to interact with protein properties ([ref](https://www.ipd.uw.edu/software/)) *in silico* ([ref](https://www.nature.com/articles/s41586-024-07601-y)). To this end, an *ongoing* endeavor relates to developing capabilities around `Protein Folding, Single Cell,` and a suite of discovery tools within the [Genesis WorkBench](https://`https://github.com/databricks-industry-solutions/genesis-workbench`) for Life Sciences R&D. \n",
+                "It would be helpful to combine the under-researched areas for proteins of interest and visualize their corresponding 3D structural information. By leveraging Deep Learning / GenAI /Transformer models (e.g., [AlphaFold](https://www.nature.com/articles/s41586-021-03819-2), [RFdiffusion](https://www.nature.com/articles/s41586-023-06415-8), including other relevant Life Sciences GenAI/Transformer models, etc.) trained or fine-tuned to predict protein function, structure ([ref](https://deepmind.google/discover/blog/alphafold-reveals-the-structure-of-the-protein-universe/)), as well as potentially simulate new proteins or ways to interact with protein properties ([ref](https://www.ipd.uw.edu/software/)) *in silico* ([ref](https://www.nature.com/articles/s41586-024-07601-y)). To this end, an *ongoing* endeavor relates to developing capabilities around `Protein Folding, Single Cell,` and a suite of discovery tools within the [Genesis WorkBench](https://github.com/databricks-industry-solutions/genesis-workbench) for Life Sciences R&D. \n",
                 "\n",
                 "---   \n",
                 "<p>&nbsp;</p>\n"
@@ -405,7 +405,7 @@
             "x": 0,
             "y": 0,
             "width": 6,
-            "height": 20
+            "height": 34
           }
         }
       ],
@@ -1055,7 +1055,7 @@
             "multilineTextboxSpec": {
               "lines": [
                 "### 2.4 Interactive Exploratory Analyses  using `Organism_SimpleTerm`\n",
-                "- With the help of preprocessing our proteins data using [`databricks-meta-llama-3-1-70b-instruct` within an `ai_query()` to covert `scientific2simple` terms](https://e2-demo-west.cloud.databricks.com/editor/notebooks/1625373258635024?o=2556758628403379) we can more easily use an Organism's  *layman term* to explore its associated `ProteinType`, `GeneName`, `Sequence`, `Molecular_Weight`\n",
+                "- With the help of preprocessing our proteins data using [`databricks-claude-sonnet-4-5` within an `ai_query()` to covert `scientific2simple` terms](https://e2-demo-west.cloud.databricks.com/editor/notebooks/1625373258635024?o=2556758628403379) we can more easily use an Organism's  *layman term* to explore its associated `ProteinType`, `GeneName`, `Sequence`, `Molecular_Weight`\n",
                 "- Within the `Organism_SimpleTerm` Search box below: Filter by e.g. `human`, `mouse`, `fly`, `fungus`, `frog`, `zebrafish` to explore an Organism's protein information."
               ]
             }
@@ -2515,7 +2515,8 @@
       "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
     },
     "genieSpace": {
-      "isEnabled": true
+      "isEnabled": true,
+      "enablementMode": "ENABLED"
     },
     "applyModeEnabled": false
   }

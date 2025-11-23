@@ -7,7 +7,7 @@ The dashboard template JSON file:
 
 - Please update all Unity Catalog **`{catalog}.{schema}.*table`** paths to match the ones being specified and used in the notebooks, e.g. users may have specified their **`<catalog_name>.<schema_name>`** etc. Default `Table` names would be used per notebook/dashboard template. 
 
-- Reivew and `run` the notebook [`code2embed_img_in_dashboard.ipynb`](code2embed_img_in_dashboard.ipynb) to copy over the relevant architecture flow image for embedding in dashboard, remembering to update the corresponding `markdown-url` in the dashboard template `JSON` as shown in the notebook.
+- Reivew and `run` the notebook [**`code2embed_img_in_dashboard.ipynb`**](code2embed_img_in_dashboard.ipynb) to copy over the relevant architecture flow image for embedding in dashboard, remembering to update the corresponding `markdown-url` in the dashboard template `JSON` as shown in the notebook.
 
 - For "ask Genie" within dashboard, please **Enable Genie** via the **`AIBI settings`** (see screenshot below; RHS panel). Alternatively you can create a separate Genie Space and link it to the dashboard.      
 
@@ -24,13 +24,9 @@ The dashboard template JSON file:
 ### What the 2-page Dashboard looks like:
 
 #### [Overview Tab] -- `print-extracted from editing view` 
-![overview](../assets/imgs/AI-Driven%20Drug%20Discovery%20%5BOverview%5D.jpg) 
+![overview](../assets/imgs/AI-Driven Drug Discovery [Overview].jpg) 
+<!-- /Workspace/Users/may.merkletan@databricks.com/REPOs/ai-driven-drug-discovery/assets/imgs/AI-Driven Drug Discovery [Overview].jpg -->
    
 #### [Dashboard Tab] -- `downloaded as PDF from published view`
-![dashboard](../assets/imgs/AI-Driven%20Drug%20Discovery%20%5BDashboard%5D.jpg)
-
-
-<!-- ![overview](https://github.com/databricks-industry-solutions/ai-driven-drug-discovery/blob/mmt_devs/assets/imgs/AI-Driven%20Drug%20Discovery%20%5BOverview%5D.jpg) 
-
-![dashboard](https://github.com/databricks-industry-solutions/ai-driven-drug-discovery/blob/mmt_devs/assets/imgs/AI-Driven%20Drug%20Discovery%20%5BDashboard%5D.jpg) -->
+![dashboard](../assets/imgs/AI-Driven Drug Discovery [Dashboard].jpg)
 
