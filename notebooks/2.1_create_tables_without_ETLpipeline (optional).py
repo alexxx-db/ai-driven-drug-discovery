@@ -22,7 +22,8 @@ import io
 
 # DBTITLE 1,define UC variables in utils and extract them
 remove_widgets() 
-uc_config = setup_uc_paths(spark=None, use_widgets=True); ## if you update the values in widgest -- it will automatically trigger an update of the UC paths
+uc_config = setup_uc_paths(use_widgets=True, print_endpoint=False, silent=False); 
+## if you use the widgets and update the values in widgets -- UC paths will be automatically updated
 
 # Extract catalog, schema, volume names
 catalog_name = uc_config["catalog_name"]
