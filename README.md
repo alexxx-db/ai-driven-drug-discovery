@@ -17,7 +17,7 @@ This solution accelerator guides you through the development of a [_multi-page_ 
 
 <!-- The diagram illustrates the flow of processes involved to setup the AIBI Genie space within the [Databricks Intelligent Platform](https://www.databricks.com/resources/demos/tours/horizontal/introducing-databricks-intelligence-platform) and the features utilized (in red).      -->
 
-![architecture sketch](./assets/imgs/high-level-flow-arch.png) 
+![architecture sketch](./assets/imgs/process-oreinted_highlevelflowARCH_v0.2.png) 
 
 
 
